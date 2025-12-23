@@ -10,9 +10,7 @@ real-world computer vision pipelines commonly used in research and industry.
 
 ---
 
-## Project Highlights
-
-### 1. 3D Reconstruction
+## 3D Reconstruction
 [`3D-Reconstruction`](./3D-Reconstruction)
 
 - Fundamental & essential matrix estimation
@@ -23,7 +21,7 @@ real-world computer vision pipelines commonly used in research and industry.
 
 ---
 
-### 2. Augmented Reality with Planar Homographies
+## Augmented Reality with Planar Homographies
 [`augmented-reality`](./augmented-reality)
 
 - FAST + BRIEF feature detection and matching
@@ -33,7 +31,7 @@ real-world computer vision pipelines commonly used in research and industry.
 
 ---
 
-### 3. Lucas–Kanade Tracking
+## Lucas–Kanade Tracking
 [`lucas-kanade-tracking`](./lucas-kanade-tracking)
 
 - Lucas–Kanade translation tracking
@@ -43,7 +41,7 @@ real-world computer vision pipelines commonly used in research and industry.
 
 ---
 
-### 4. Scene Classification with Spatial Pyramid Matching
+## Scene Classification with Spatial Pyramid Matching
 [`spatial-pyramid-matching`](./spatial-pyramid-matching)
 
 - Multi-scale filter bank feature extraction
@@ -53,7 +51,7 @@ real-world computer vision pipelines commonly used in research and industry.
 
 ---
 
-### 5. Neural Network from Scratch for Visual Recognition
+## Neural Network from Scratch for Visual Recognition
 [`neural-network`](./neural-network)
 
 - Fully-connected neural network implemented from scratch
