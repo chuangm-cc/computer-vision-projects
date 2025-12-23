@@ -11,7 +11,7 @@ real-world computer vision pipelines commonly used in research and industry.
 ---
 
 ## 3D Reconstruction
-[`3D-Reconstruction`](./3D-Reconstruction)
+- Folder: [`3D-Reconstruction`](./3D-Reconstruction)
 
 - Fundamental & essential matrix estimation
 - Triangulation and camera pose recovery
@@ -22,7 +22,7 @@ real-world computer vision pipelines commonly used in research and industry.
 ---
 
 ## Augmented Reality with Planar Homographies
-[`augmented-reality`](./augmented-reality)
+- Folder: [`augmented-reality`](./augmented-reality)
 
 - FAST + BRIEF feature detection and matching
 - Homography estimation with normalization
@@ -32,7 +32,7 @@ real-world computer vision pipelines commonly used in research and industry.
 ---
 
 ## Lucas–Kanade Tracking
-[`lucas-kanade-tracking`](./lucas-kanade-tracking)
+- Folder: [`lucas-kanade-tracking`](./lucas-kanade-tracking)
 
 - Lucas–Kanade translation tracking
 - Affine motion tracking
@@ -42,7 +42,7 @@ real-world computer vision pipelines commonly used in research and industry.
 ---
 
 ## Scene Classification with Spatial Pyramid Matching
-[`spatial-pyramid-matching`](./spatial-pyramid-matching)
+- Folder: [`spatial-pyramid-matching`](./spatial-pyramid-matching)
 
 - Multi-scale filter bank feature extraction
 - Bag of visual words representation
@@ -52,7 +52,7 @@ real-world computer vision pipelines commonly used in research and industry.
 ---
 
 ## Neural Network from Scratch for Visual Recognition
-[`neural-network`](./neural-network)
+- Folder: [`neural-network`](./neural-network)
 
 - Fully-connected neural network implemented from scratch
 - Gradient-based optimization
