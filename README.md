@@ -12,7 +12,7 @@ real-world computer vision pipelines commonly used in research and industry.
 
 ## Project Highlights
 
-### 1. 3D Reconstruction from Two Views
+### 1. 3D Reconstruction
 [`3D-Reconstruction`](./3D-Reconstruction)
 
 - Fundamental & essential matrix estimation
