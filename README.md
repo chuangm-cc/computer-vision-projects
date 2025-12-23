@@ -1,4 +1,4 @@
-# Computer Vision Porject
+# Computer Vision Project
 
 This repository is my **classical and modern computer
 vision projects**, implemented from scratch in Python, with a focus on
