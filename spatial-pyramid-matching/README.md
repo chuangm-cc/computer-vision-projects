@@ -42,9 +42,11 @@ Each pixel is mapped to its nearest visual word.
 Larger dictionaries capture finer image structures.
 
 **K = 10**
+
 ![Wordmap K10](./assets/1.3.png)
 
 **K = 40**
+
 ![Wordmap K40](./assets/1.3.2.png)
 
 ---
