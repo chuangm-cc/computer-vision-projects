@@ -10,52 +10,48 @@ real-world computer vision pipelines commonly used in research and industry.
 
 ---
 
-## 3D Reconstruction
+### 3D Reconstruction
 - Folder: [`3D-Reconstruction`](./3D-Reconstruction)
 
-- Fundamental & essential matrix estimation
-- Triangulation and camera pose recovery
-- RANSAC for robust estimation
-- Bundle adjustment for reprojection error minimization
-- Multi-view 3D reconstruction
+Implemented a complete multi-view 3D reconstruction pipeline, including camera pose estimation and sparse 3D point cloud recovery using geometric vision methods.
+
+**Tech:** Multi-view Geometry, Fundamental / Essential Matrix, Triangulation, RANSAC, Bundle Adjustment
 
 ---
 
-## Augmented Reality with Planar Homographies
+### Augmented Reality with Planar Homographies
 - Folder: [`augmented-reality`](./augmented-reality)
 
-- FAST + BRIEF feature detection and matching
-- Homography estimation with normalization
-- RANSAC-based outlier rejection
-- Image-based and video-based augmented reality
+Implemented an image- and video-based augmented reality system using planar homography estimation and robust feature matching.
+
+**Tech:** FAST, BRIEF, Homography Estimation, RANSAC, Image-based AR, Video-based AR
 
 ---
 
-## Lucas–Kanade Tracking
+### Lucas–Kanade Tracking
 - Folder: [`lucas-kanade-tracking`](./lucas-kanade-tracking)
 
-- Lucas–Kanade translation tracking
-- Affine motion tracking
-- Inverse compositional algorithm
-- Robust tracking across image sequences
+Implemented Lucas–Kanade tracking algorithms supporting translation and affine motion models for robust feature tracking across image sequences.
+
+**Tech:** Lucas–Kanade Tracker, Affine Motion, Inverse Compositional Algorithm, Optical Flow
 
 ---
 
-## Scene Classification with Spatial Pyramid Matching
+### Scene Classification with Spatial Pyramid Matching
 - Folder: [`spatial-pyramid-matching`](./spatial-pyramid-matching)
 
-- Multi-scale filter bank feature extraction
-- Bag of visual words representation
-- Spatial pyramid matching encoding
-- Nearest-neighbor and neural network classifiers
+Implemented a scene classification pipeline using Spatial Pyramid Matching and Bag of Visual Words representations.
+
+**Tech:** Spatial Pyramid Matching, Bag of Visual Words, Feature Encoding, Scene Classification
 
 ---
 
-## Neural Network from Scratch for Visual Recognition
+### Neural Network from Scratch for Visual Recognition
 - Folder: [`neural-network`](./neural-network)
 
-- Fully-connected neural network implemented from scratch
-- Gradient-based optimization
+Implemented a fully-connected neural network for visual recognition entirely from scratch with gradient-based optimization.
+
+**Tech:** Neural Networks from Scratch, Backpropagation, Gradient Descent
 
 ---
 
