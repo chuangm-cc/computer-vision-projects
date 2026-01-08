@@ -67,7 +67,7 @@ Increasing the dictionary size results in finer structural segmentation.
 ### Baseline: Nearest Neighbor + SPM
 
 Using **SPM features** with **histogram intersection distance** and
-**1-nearest-neighbor classification**, the baseline system achieves:
+**nearest-neighbor classification**, the baseline system achieves:
 
 - Overall accuracy: **~50.5%**
 
@@ -81,8 +81,6 @@ Using **SPM features** with **histogram intersection distance** and
 | **C5** | 2  | 0  | 7  | 2  | 5  | 28 | 5  | 1  |
 | **C6** | 8  | 1  | 2  | 0  | 5  | 7  | 22 | 5  |
 | **C7** | 3  | 4  | 9  | 0  | 3  | 3  | 4  | 24 |
-
----
 
 Some scene categories are difficult to distinguish due to **similar visual
 appearance and spatial layout**.
