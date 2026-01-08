@@ -84,6 +84,23 @@ Using **SPM features** with **histogram intersection distance** and
 
 ---
 
+Some scene categories are difficult to distinguish due to **similar visual
+appearance and spatial layout**.
+
+- **Highway vs. Windmill**: both often contain large sky regions and strong
+  horizontal structures, leading to similar visual word distributions.
+
+- **Laundromat vs. Kitchen**: both are indoor scenes with repetitive rectangular
+  structures (machines, cabinets) and similar lighting conditions.
+
+These errors reflect a limitation of BoW + SPM methods, which rely on
+appearance statistics and lack explicit semantic object understanding.
+
+---
+
+
+---
+
 ### Improved Model: Neural Network Classifier
 
 SPM features are further used as input to a **neural network classifier**,
