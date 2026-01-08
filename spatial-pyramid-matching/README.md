@@ -1,9 +1,12 @@
 # Spatial Pyramid Matching for Scene Classification
 
 This project implements a classic **scene classification system** based on  
-**Bag of Visual Words (BoW)** and **Spatial Pyramid Matching (SPM)**, following
-the seminal work by Lazebnik et al. (CVPR 2006).
+**Bag of Visual Words (BoW)** and **Spatial Pyramid Matching (SPM)**, following  
+the seminal work by **Lazebnik et al. (CVPR 2006)**.
 
+The project builds a **complete traditional computer vision pipeline**, from
+low-level feature extraction to mid-level image representation and final
+scene classification, without relying on deep convolutional networks.
 
 **Full technical details:**  
 [Project Report (PDF)](./spatial_pyramid_matching_report.pdf)
@@ -12,18 +15,22 @@ the seminal work by Lazebnik et al. (CVPR 2006).
 
 ## Pipeline Overview
 
-1. **Multi-scale filter bank feature extraction**
-2. **K-means clustering** to build a visual word dictionary
-3. **Wordmap generation** by assigning pixels to visual words
-4. **Spatial Pyramid Matching (SPM)** feature encoding
-5. **Scene classification** via nearest neighbor and neural network models
+1. **Multi-scale filter bank feature extraction** in Lab color space  
+2. **K-means clustering** to build a visual word dictionary  
+3. **Wordmap generation** via nearest visual word assignment  
+4. **Spatial Pyramid Matching (SPM)** for spatially-aware feature encoding  
+5. **Scene classification** using nearest neighbor and neural network models  
 
 ---
 
 ## Multi-scale Filter Bank Responses
 
-The filter bank consists of Gaussian, Laplacian of Gaussian, and directional
-derivatives at multiple scales, applied in the Lab color space.
+A predefined filter bank including **Gaussian**, **Laplacian of Gaussian**, and
+**directional Gaussian derivatives** is applied at multiple scales in the
+**Lab color space**.
+
+Each pixel is represented by concatenated multi-scale filter responses,
+capturing local texture, edges, and orientation information.
 
 ![Filter Bank Responses](./assets/1.1.2.png)
 
@@ -31,15 +38,21 @@ derivatives at multiple scales, applied in the Lab color space.
 
 ## Visual Words Dictionary
 
-Filter responses from training images are clustered using k-means to form a
-dictionary of visual words.
+Filter responses sampled from training images are clustered using **K-means**
+to form a dictionary of **K visual words**, which discretize continuous local
+features into a symbolic representation.
+
+Larger dictionaries provide finer visual distinctions at the cost of increased
+computational complexity.
 
 ---
 
 ## Wordmap Visualization
 
-Each pixel is mapped to its nearest visual word.  
-Larger dictionaries capture finer image structures.
+Each pixel is assigned to its nearest visual word, producing a **wordmap**
+that reflects the spatial distribution of local appearance patterns.
+
+Increasing the dictionary size results in finer structural segmentation.
 
 **K = 10**
 
@@ -54,10 +67,11 @@ Larger dictionaries capture finer image structures.
 ## Recognition Performance
 
 ### Baseline: Nearest Neighbor + SPM
+
+Using **SPM features** with **histogram intersection distance** and
+**1-nearest-neighbor classification**, the baseline system achieves:
+
 - Overall accuracy: **~50.5%**
-
-- confusion matrix: 
-
 
 | GT \ Pred | C0 | C1 | C2 | C3 | C4 | C5 | C6 | C7 |
 |----------|----|----|----|----|----|----|----|----|
@@ -70,35 +84,29 @@ Larger dictionaries capture finer image structures.
 | **C6** | 8  | 1  | 2  | 0  | 5  | 7  | 22 | 5  |
 | **C7** | 3  | 4  | 9  | 0  | 3  | 3  | 4  | 24 |
 
-
 ---
 
 ### Improved Model: Neural Network Classifier
 
+SPM features are further used as input to a **neural network classifier**,
+replacing the nearest-neighbor decision rule and enabling non-linear
+classification.
+
 ![NN Confusion Matrix](./assets/steps.png)
 
-1. By increasing K, we can get more kind of words in wordmap, so that more details can be
-gotten for classification. Then we can get more features, and two similar image from different class
-can be classified with these additional details.
-2. By in creasing alpha, we get more input for building the dictionary. With more input pixels, the
-dictionary can have more information about the image. When calling K-means, the more information
-will provide better clustering.
-3. By increasing layer number, the SPM method can divide the image into more parts and get more
-histograms and features. With these more features, the two similar image from different class can be
-classified.
+Performance improvements are achieved by:
+1. Increasing dictionary size (**K**) for finer visual representation  
+2. Increasing sampled pixels (**α**) for better dictionary learning  
+3. Increasing SPM layers (**L**) to capture richer spatial layouts  
 
-### Further improvement
+---
 
-1. After getting features(hist), I build a neural-network model using tensorFlow in main():
-NN model(opts):
-Then use features as X input and labels as Y to fit the model. Then I get the prediction using the
-features of test data.
-2. Compared with simply using similarity for prediction, I think a neural-network can provide with
-better results for accuracy.
-3. The accuracy gets improved:
+### Further Improvement
 
-- New accuracy:0.6875
-- New matrix:
+A TensorFlow-based neural network trained on SPM features further improves
+classification accuracy by learning non-linear decision boundaries.
+
+- New accuracy: **0.6875**
 
 | GT \ Pred | C0 | C1 | C2 | C3 | C4 | C5 | C6 | C7 |
 |----------|----|----|----|----|----|----|----|----|
@@ -112,4 +120,3 @@ better results for accuracy.
 | **C7** | 1  | 4  | 4  | 1  | 2  | 3  | 2  | 33 |
 
 ---
-
