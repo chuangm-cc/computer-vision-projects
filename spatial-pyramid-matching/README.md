@@ -96,14 +96,7 @@ appearance statistics and lack explicit semantic object understanding.
 
 ---
 
-
----
-
-### Improved Model: Neural Network Classifier
-
-SPM features are further used as input to a **neural network classifier**,
-replacing the nearest-neighbor decision rule and enabling non-linear
-classification.
+### Improved Model
 
 ![NN Confusion Matrix](./assets/steps.png)
 
@@ -114,9 +107,13 @@ Performance improvements are achieved by:
 
 ---
 
-### Further Improvement
+### Further Improvement: Neural Network Classifier
 
-A TensorFlow-based neural network trained on SPM features further improves
+SPM features are further used as input to a **neural network classifier**,
+replacing the nearest-neighbor decision rule and enabling non-linear
+classification.
+
+A neural network trained on SPM features further improves
 classification accuracy by learning non-linear decision boundaries.
 
 - New accuracy: **0.6875**
