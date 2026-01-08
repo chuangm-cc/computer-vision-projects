@@ -1,7 +1,6 @@
 # Spatial Pyramid Matching for Scene Classification
 
-This project implements a classic **scene classification system** based on  **Bag of Visual Words (BoW)** and **Spatial Pyramid Matching (SPM)**, following  
-the seminal work by **Lazebnik et al. (CVPR 2006)**.
+This project implements a classic **scene classification system** based on  **Bag of Visual Words (BoW)** and **Spatial Pyramid Matching (SPM)**, following the seminal work by **Lazebnik et al. (CVPR 2006)**.
 
 The project builds a **complete traditional computer vision pipeline**, from
 low-level feature extraction to mid-level image representation and final
