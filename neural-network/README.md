@@ -1,7 +1,7 @@
 # Neural Network for Visual Recognition
 
-> **From-scratch neural networks + OCR pipeline + unsupervised representation learning**  
-> This project builds core vision learning components **from first principles** (NumPy), then applies them to **character recognition and OCR**, and finally explores **learning character structure without labels** (AutoEncoder + PSNR).
+**From-scratch neural networks + OCR pipeline + unsupervised representation learning**  
+This project builds core vision learning components **from first principles** (NumPy), then applies them to **character recognition and OCR**, and finally explores **learning character structure without labels** (AutoEncoder + PSNR).
 
 **Full technical details:**  
 [Project Report (PDF)](./neural_network_report.pdf)
@@ -22,7 +22,7 @@
 
 ## OCR System (How “image → text” works)
 
-> **Detect first, recognize second** — a practical OCR design used in real systems.
+**Detect first, recognize second** — a practical OCR design used in real systems.
 
 - **Denoise** (e.g., bilateral filtering): suppress background texture while preserving stroke edges  
 - **Binarize** (grayscale + Otsu threshold): separate dark text from light background  
@@ -36,7 +36,7 @@
 
 ## Learning Character Structure Without Labels (AutoEncoder)
 
-> Instead of predicting labels, the model learns by **reconstructing the input**.
+Instead of predicting labels, the model learns by **reconstructing the input**.
 
 - Train an **AutoEncoder** to map: `image → compressed latent → reconstructed image`  
 - The **bottleneck latent space** forces the network to store only the most important information  
